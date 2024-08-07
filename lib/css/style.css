@@ -1,0 +1,114 @@
+:root {
+  --main-color: green;
+  --main-background: #333;
+}
+
+body {
+  color: #333;
+  font-family: sans-serif;
+}
+
+
+.navbar {
+  background-color: var(--main-background);
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 17px;
+
+  border-bottom: 5px solid var(--main-background);
+}
+
+.navbar a:hover {
+  border-bottom: 5px solid var(--main-color);
+}
+
+.navbar a.active {
+  background: var(--main-color);
+  border-bottom: 5px solid var(--main-color);
+  color: white;
+}
+
+.navbar a.selected {
+  background: var(--main-color);
+  border-bottom: 5px solid var(--main-color);
+}
+
+
+/**/
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+}
+
+.responsible-layout>* {
+  padding: 0rem;
+}
+
+.responsible-layout>.layout-header {
+  grid-area: header;
+  background: #fff;
+}
+
+.responsible-layout>.layout-main {
+  grid-area: layout-main;
+  background: #fff;
+}
+
+.responsible-layout>.layout-left {
+  grid-area: layout-left;
+  background: #eee;
+}
+
+.responsible-layout>.layout-right {
+  grid-area: layout-right;
+  background: #eee;
+}
+
+.responsible-layout>.layout-footer {
+  grid-area: footer;
+  background: #72c2f1;
+}
+
+.responsible-layout {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    'header header header header'
+    'layout-left layout-main layout-main layout-right'
+    'footer footer footer footer';
+
+  min-height:100vh;
+  min-height:100svh;
+}
+
+@media (min-width:768px) {
+  .responsible-layout {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr auto auto;
+    grid-template-areas:
+      'header header'
+      'layout-main layout-main'
+      'layout-left layout-right'
+      'footer footer';
+  }
+}
+
+@media (min-width:1024px) {
+  .responsible-layout {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      'header header header header'
+      'layout-left layout-main layout-main layout-right'
+      'footer footer footer footer';
+  }
+}
