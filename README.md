@@ -2,7 +2,7 @@
 
 Create a responsive Layout with common header and footer part.
 
-Using one hmtl file for header and footter, these are dynamically insert in eery page by javascript.
+Using one hmtl file for header and footer, these are dynamically insert in every page by javascript.
 
 ![Layout](doc/logo.png)
 
